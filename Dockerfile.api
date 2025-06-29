@@ -2,16 +2,16 @@ FROM node:18-alpine
 
 WORKDIR /app
 
-# Copia apenas o package.json para aproveitar o cache do Docker
+
 COPY package*.json ./
 
-# Instala todas as dependências do monorepo
+
 RUN npm install
 
-# Copia todo o código-fonte
+
 COPY ./src ./src
 
 EXPOSE 3001
 
-# Comando para iniciar especificamente o serviço da API
+
 CMD [ "node", "src/api/server.js" ]
