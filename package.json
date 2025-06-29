@@ -1,0 +1,13 @@
+{
+  "name": "quote-app-monorepo",
+  "version": "1.0.0",
+  "description": "A fullstack quote application in a monorepo structure.",
+  "main": "src/api/server.js",
+  "scripts": {
+    "start": "node src/api/server.js"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^5.1.0"
+  }
+}

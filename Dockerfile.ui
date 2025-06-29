@@ -1,0 +1,9 @@
+FROM nginx:1.25-alpine
+
+# Copia os arquivos estáticos do nosso front-end
+COPY src/ui /usr/share/nginx/html
+
+# Copia nossa configuração personalizada do NGINX, sobrescrevendo a padrão
+COPY nginx.conf /etc/nginx/conf.d/default.conf
+
+EXPOSE 80
